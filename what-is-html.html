@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Part1</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+
+    .chat {
+      width: 100%;
+      max-width: 300px;
+      margin: auto;
+      padding: 20px;
+      background-color: #d2dbe3;
+    }
+
+    .message {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    .message-info {
+      font-size: 0.85em;
+      color: #666;
+    }
+
+    .message-body {
+      max-width: 80%;
+      padding: 10px;
+      border-radius: 10px;
+      margin: 5px 10px;
+    }
+
+    .message-body:hover {
+      transition: box-shadow 0.8s;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    }
+
+    .message-time {
+      font-size: 0.75em;
+      color: #999;
+    }
+
+    .friend .message-time {
+      align-self: flex-start;
+    }
+    
+    .me .message-time {
+      align-self: flex-end;
+    }
+
+    .friend .message-body {
+      background-color: #fff;
+      align-self: flex-start;
+    }
+
+    .me .message-body {
+      background-color: #007bff;
+      color: #fff;
+      align-self: flex-end;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat">
+    <div class="message friend">
+      <div class="message-info">나리타</div> 
+      <p class="message-body">사토미는 평소엔 정중하게 존댓말 쓰다가 뚜껑 열리면 갑자기 입이 험해지네ㅋㅋ 프리저 같당 😂</p>
+      <time class="message-time">15:32</time>
+    </div>
+    <div class="message friend">
+      <div class="message-info">나리타</div> 
+      <p class="message-body">미안</p>
+      <time class="message-time">15:33</time>
+    </div>
+    <div class="message friend">
+      <div class="message-info">나리타</div> 
+      <p class="message-body">조심해서 가</p>
+      <time class="message-time">15:33</time>
+    </div>
+    <div class="message friend">
+      <div class="message-info">나리타</div> 
+      <p class="message-body">이 멍청해 보이는 부적은 뭐죠?</p>
+      <time class="message-time">15:33</time>
+    </div>
+    <div class="message me">
+      <p class="message-body">꺼져요</p>
+      <time class="message-time">15:40</time>
+    </div>
+  </div>
+</body>
+</html>
