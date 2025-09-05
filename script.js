@@ -4,10 +4,10 @@ let direction = 'yes'
 let box
 
 function boxProgram() {
-  numberOfStep = prompt('몇 걸음 걸을까요?')
-  direction = prompt('왼쪽으로 갈까요?')
+  numberOfStep = prompt('몇 걸음 걸을까요?')  
+  direction = prompt('왼쪽으로 갈까요? (yes/no)')
   
-  let moveStep = 1
+  let moveStep = 1  
   
   if (direction === 'yes') {
     while (moveStep <= numberOfStep) {
@@ -16,7 +16,7 @@ function boxProgram() {
       moveStep++
     } 
 
-    currentLeftBoxPosition = currentLeftBoxPosition - moveStep
+        currentLeftBoxPosition = currentLeftBoxPosition - moveStep
   } else {
     while (moveStep <= numberOfStep) {
       box.style.left = (currentLeftBoxPosition + moveStep) + 'px'
